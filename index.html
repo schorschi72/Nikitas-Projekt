@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Kopfrechnen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Startbildschirm -->
+    <section id="screen-start" class="screen active">
+      <h1>Kopfrechnen</h1>
+      <p class="lead">10 Aufgaben. Tippe die richtige Lösung so schnell wie möglich – je schneller, desto mehr Punkte.</p>
+      <p class="highscore-line">Highscore: <strong id="start-highscore">0</strong></p>
+      <button id="btn-start" class="primary">Start</button>
+    </section>
+
+    <!-- Spielbildschirm -->
+    <section id="screen-game" class="screen">
+      <div class="status">
+        <span>Aufgabe <strong id="progress">1/10</strong></span>
+        <span>Punkte <strong id="score">0</strong></span>
+      </div>
+      <div class="timer"><div id="timer-bar" class="timer-bar"></div></div>
+      <div id="question" class="question">0 + 0</div>
+      <div id="feedback" class="feedback">&nbsp;</div>
+      <div id="answers" class="answers">
+        <button class="answer" data-index="0"></button>
+        <button class="answer" data-index="1"></button>
+        <button class="answer" data-index="2"></button>
+        <button class="answer" data-index="3"></button>
+      </div>
+    </section>
+
+    <!-- Endbildschirm -->
+    <section id="screen-end" class="screen">
+      <h1>Geschafft!</h1>
+      <div class="final-score"><span id="end-score">0</span><small>Punkte</small></div>
+      <ul class="stats">
+        <li>Richtig: <strong id="end-correct">0/10</strong></li>
+        <li>Ø Antwortzeit: <strong id="end-avg">–</strong></li>
+        <li>Highscore: <strong id="end-highscore">0</strong></li>
+      </ul>
+      <p id="new-record" class="new-record" hidden>🎉 Neuer Highscore!</p>
+      <button id="btn-again" class="primary">Nochmal spielen</button>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
